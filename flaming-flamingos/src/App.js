@@ -9,8 +9,22 @@ import Home from "./Components/Home/Home";
 import Jewelry from './Components/Jewlery/Jewelry';
 
 
-function App() {
 
+function App() {
+  const [items, setItems] = useState([])
+  const getItems = async () => {
+    try {
+      const response = await fetch('https://fakestoreapi.com/products');
+      const data = await response.json();
+      setItems(data);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getItems();
+  }, [])
   return (
     <div className="App">
       <h1>
@@ -23,7 +37,7 @@ function App() {
         <Route path="/" exact component={Home}/>
           {/* <Route path="/" exact component={BodyImage}/> */}
           {/* // <Route path="/shoes" render={()=><Shoes Shoes={Shoes}/> */}
-          <Route path="/clothing" exact component={Clothing}/>
+          <Route path="/clothing" exact component={Clothing} items={items}/>
           <Route path="/jewelry"  component={Jewelry}/>
         
         </Switch>

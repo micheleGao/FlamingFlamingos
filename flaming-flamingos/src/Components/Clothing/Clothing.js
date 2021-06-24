@@ -1,25 +1,13 @@
-import {useState, useEffect} from 'react';
-
-function Clothing() {
-    const [items, setItems] = useState([])
-    const getItems = async () => {
-      try {
-        const response = await fetch('https://fakestoreapi.com/products');
-        const data = await response.json();
-        setItems(data);
-        console.log(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    useEffect(() => {
-      getItems();
-    }, [])
+import {useState} from 'react';
+function Clothing({items}) {
+    // const [items, setItems] = useState([])
+    console.log(items);
+    // if(items.length===0){
+    //     return null;
+    // }
     return (
-      <div className="clothes">
-        <h1>
-          This is the clothing page
-        </h1>
+      <div className="clothing-list">
+        <h1>This is the clothing page</h1>
         <div className="Clothing">
                 {items && items.map((item, id)=>{
                     console.log(item)
@@ -28,6 +16,7 @@ function Clothing() {
                             <img src={item.image}/>
                             <h1>{item.price}</h1>
                             <h3>{item.title}</h3>
+                            <h4>{item.category}</h4>
                         </div>
                     )
                 })}  
