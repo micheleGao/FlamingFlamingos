@@ -16,13 +16,13 @@ function Jewelry() {
     }, [])
 
     return (
-        <div className="App">
+        <div className="jewelry">
             <div>
                 {jewelry.map((jewels, id) => {
                     return (
                         <div className="jewelry" key={id} >
                            <h1>{jewels.title}</h1>
-                           <img src={jewels.image}/>
+                           <img src={jewels.image} alt="jewelry"/>
                            <h2>{jewels.price}</h2>
                         </div>
                     )

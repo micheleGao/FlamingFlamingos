@@ -11,6 +11,7 @@ function Header() {
           <p><Link to="/shoes">Shoes</Link></p>
           <p><Link to="/accessories">Accessories</Link></p>
           <p><Link to="/jewelry">Jewelry</Link></p>
+          <p><Link to="/productslist">All Products</Link></p>
         </nav>
   
       </div>
