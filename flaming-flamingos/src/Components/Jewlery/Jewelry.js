@@ -20,6 +20,7 @@ function Jewelry({items}) {
                            <h1>{jewel.title}</h1>
                            <img src={jewel.image} alt="jewelery"/>
                            <h2>{jewel.price}</h2>
+                           <p><button>ADD TO CART</button></p>
                         </div>
                     )
                 })}

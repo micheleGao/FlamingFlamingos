@@ -11,8 +11,13 @@ function Header() {
         <nav className="nav">
           This is where all the links go
             <ul>
-            <Link to="/">Home</Link>
-            <Link to="/cart">Cart
+            <p><Link to="/">Home</Link></p>
+            <p><Link to="/clothing">Clothing</Link></p>
+            <p><Link to="/Random">Have some random fun!</Link></p>
+            {/* <h1><Link to="/Miscellaneous">Miscellaneous</Link></h1> */}
+            <p><Link to="/jewelry">Jewelry</Link></p>
+            <p><Link to="/productslist">All Products</Link></p>
+            <p><Link to="/cart">
               <button>
                 <img
                   width='30'
@@ -20,12 +25,7 @@ function Header() {
                   alt='Shopping cart icon'
                 />
               </button>
-              </Link>
-            <Link to="/clothing">Clothing</Link>
-            <Link to="/Random">Have some random fun!</Link>
-            {/* <h1><Link to="/Miscellaneous">Miscellaneous</Link></h1> */}
-            <Link to="/jewelry">Jewelry</Link>
-            <Link to="/productslist">All Products</Link>
+              </Link></p>
           </ul>
         </nav>
   

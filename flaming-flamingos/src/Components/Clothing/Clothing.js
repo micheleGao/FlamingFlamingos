@@ -1,6 +1,6 @@
 // import ProductsList from '../ProductsList/ProductsList';
-import { useState, useEffect } from 'react';
-function Clothing({ items }) {
+import { useState, useEffect, useReducer } from 'react';
+function Clothing({items}) {
   console.log(items)
   if (items.length <= 0) {
     return "loading..."
@@ -13,6 +13,11 @@ function Clothing({ items }) {
   )
   console.log(apparels);
 
+  function handleClick(){
+    console.log('button from clothing page');
+  }
+
+
   return (
     <div className="flexbox-container">
     <h1>This is the clothing</h1>
@@ -24,7 +29,7 @@ function Clothing({ items }) {
                             <h1>{apparel.price}</h1>
                             <h3>{apparel.title}</h3>
                             <h4>{apparel.category}</h4>
-                            <button className="add-clothing">ADD</button>
+                            <p><button className="add-clothing" onClick={handleClick}>ADD</button></p>
                         </div>
                     )}
                 )}  
