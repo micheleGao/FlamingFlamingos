@@ -1,3 +1,4 @@
+
 function Jewelry({items}) {
     if(items.length <= 0){
         return "loading...."
@@ -11,7 +12,7 @@ function Jewelry({items}) {
     console.log(jewels);
 
     return (
-        <div className="jewelery">
+        <div className="jewelery-list">
             <div>
                 {jewels && jewels.map((jewel, id) => {
                     return (

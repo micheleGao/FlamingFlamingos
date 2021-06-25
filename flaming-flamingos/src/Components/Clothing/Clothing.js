@@ -14,9 +14,9 @@ function Clothing({ items }) {
   console.log(apparels);
 
   return (
-      <div className="clothing-list">
-        <h1>This is the clothing</h1>
-        <div className="Clothing">
+    <div className="flexbox-container">
+    <h1>This is the clothing</h1>
+          <div className="clothing-list">
                 {apparels && apparels.map((apparel, id)=>{
                     return(
                         <div className="clothes" key={id}>
@@ -24,6 +24,7 @@ function Clothing({ items }) {
                             <h1>{apparel.price}</h1>
                             <h3>{apparel.title}</h3>
                             <h4>{apparel.category}</h4>
+                            <button className="add-clothing">ADD</button>
                         </div>
                     )}
                 )}  

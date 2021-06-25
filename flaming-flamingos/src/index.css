@@ -1,23 +1,93 @@
 body {
   margin: 0;
+  text-align: center;
+  color:#D48C70;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
-img{
+/* img{
   height: 40%;
-  width:40%
+  width:40%;
+} */
+header nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+}
+header nav a:hover {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  padding: 1rem;
+  transition: all 300ms ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.clothing-list{
-  display:flex;
+.flexbox-conatiner{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .clothes{
+  /* flex-basis: 33%; */
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.clothes img {
+  margin: auto;
+  max-height: 400px;
+  max-width: 400px;
+  flex-basis:10%;
+  flex-wrap:wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  display:inline-flex;
+}
+
+.clothes h3,
+.clothes h1,
+.clothes h4 {
+  margin: 0;
   flex-wrap: wrap;
+  flex-direction:row;
+  text-align: center;
+  flex-basis: 15%;
+  padding:0;
+  align-items: stretch;
+}
+.add-clothing{
+  display:grid;
+  grid-template-columns: auto;
+  flex-basis: auto;
+  justify-content: center;
+  border-radius: 100%;
+  text-align: justify;
+}
+.nav{
+  flex-direction: column;
+  justify-content:space-between;
+}
+.cart {
+	width: 600px;
+	height: 100%;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px 0;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	transform: translateX(-600px);
+	padding: 1.5rem 3rem 2rem;
 }
