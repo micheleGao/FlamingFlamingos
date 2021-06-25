@@ -8,8 +8,6 @@ import Home from "./Components/Home/Home";
 import Jewelry from './Components/Jewlery/Jewelry';
 import ProductsList from './Components/ProductsList/ProductsList';
 
-
-
 function App() {
   const [items, setItems] = useState([])
   console.log(items);
@@ -33,7 +31,6 @@ function App() {
         FLAMING Flamingos!
       </h1>
       <Header />
-      <BodyImage />
       <main>
         <Switch>
         <Route path="/" exact component={Home}/>
@@ -42,7 +39,7 @@ function App() {
           {/* <Route path="/clothing" component={Clothing} items={items} /> */}
           <Route path="/clothing" exact render={() => <Clothing items={items}/> } />
           <Route path="/productslist" exact render={() => <ProductsList items={items}/> } />
-          <Route path="/jewelry"  component={Jewelry}/>
+          <Route path="/jewelry"  exact render={()=> <Jewelry items={items}/>}/>
           {/* <Route path="/productslist" component={ProductsList} items={items} /> */}
           
         </Switch>

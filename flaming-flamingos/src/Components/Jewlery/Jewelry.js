@@ -1,29 +1,24 @@
-import { useState, useEffect } from 'react';
-function Jewelry() {
-    const [jewelry, setJewelry] = useState([])
-    const getJewelry = async () => {
-        try {
-            const response = await fetch("https://fakestoreapi.com/products/category/jewelery");
-            const data = await response.json();
-            setJewelry(data);
-            console.log(data);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-    useEffect(() => {
-        getJewelry();
-    }, [])
+function Jewelry({items}) {
+    if(items.length <= 0){
+        return "loading...."
+    } 
+    console.log(items)
+    const jewels = items.filter((item)=>{
+        return(
+          (item.category === "jewelery")
+          
+        )})
+    console.log(jewels);
 
     return (
-        <div className="jewelry">
+        <div className="jewelery">
             <div>
-                {jewelry.map((jewels, id) => {
+                {jewels && jewels.map((jewel, id) => {
                     return (
-                        <div className="jewelry" key={id} >
-                           <h1>{jewels.title}</h1>
-                           <img src={jewels.image} alt="jewelry"/>
-                           <h2>{jewels.price}</h2>
+                        <div className="jewelery" key={id} >
+                           <h1>{jewel.title}</h1>
+                           <img src={jewel.image} alt="jewelery"/>
+                           <h2>{jewel.price}</h2>
                         </div>
                     )
                 })}

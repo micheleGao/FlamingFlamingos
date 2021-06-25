@@ -6,8 +6,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+img{
+  height: 40%;
+  width:40%
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.clothing-list{
+  display:flex;
+}
+.clothes{
+  flex-wrap: wrap;
 }

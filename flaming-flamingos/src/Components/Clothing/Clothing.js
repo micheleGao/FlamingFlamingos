@@ -1,44 +1,34 @@
 // import ProductsList from '../ProductsList/ProductsList';
 import { useState, useEffect } from 'react';
-function Clothing({items}) {
-  // const [unity, setUnity] = useState([])
-  // const getUnity = async () => {
-  //   try {
-  //     const response = await fetch('https://rickandmortyapi.com/api/character/372');
-  //     const data = await response.json();
-  //     setUnity(data);
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   getUnity();
-  // }, [])
+function Clothing({ items }) {
   console.log(items)
-if(items.length<=0){
-  return "loading..."
-}
+  if (items.length <= 0) {
+    return "loading..."
+  }
+  //if clothing is equal to category. create a div with the following images, price. and title
+  const apparels = items.filter((item)=>{
+    return(
+      (item.category === "men's clothing") ||(item.category === "women's clothing")
+    )}
+  )
+  console.log(apparels);
+
   return (
-    <div>
-      <h1>This is the clothing page</h1>
-      <div className="clothes">
+      <div className="clothing-list">
+        <h1>This is the clothing</h1>
         <div className="Clothing">
-              <div className="clothes">
-                <img src={items[1].image} />
-                <h1>{items[1].price}</h1>
-                <h3>{items[3].title}</h3>
-                <h4>{items[4].category}</h4>
-              </div>
-        </div>
-        {/* <div>
-          <img src={unity.image} />
-          <h1>{unity.status}</h1>
-          <h3>{unity.name}</h3>
-        </div>
-      </div> */}
+                {apparels && apparels.map((apparel, id)=>{
+                    return(
+                        <div className="clothes" key={id}>
+                            <img src={apparel.image}/>
+                            <h1>{apparel.price}</h1>
+                            <h3>{apparel.title}</h3>
+                            <h4>{apparel.category}</h4>
+                        </div>
+                    )}
+                )}  
+           </div>  
       </div>
-    </div>
-  );
-}
-export default Clothing;
+    );
+  }
+  export default Clothing;
