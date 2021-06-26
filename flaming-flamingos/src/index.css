@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: lightpink;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class="clothing-list"] {
+    width: 100%;
+  }
+}
 body {
   margin: 0;
   text-align: center;
-  color:#D48C70;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color:deeppink;
+  font-family: 'Playball', cursive, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -13,71 +24,106 @@ body {
   height: 40%;
   width:40%;
 } */
-header nav{
+ul{
+  list-style: none;
+}
+li{
+  display:inline-block;
+  padding: 30px 30px 30px 30px;
+  font-size: 20px;
+  text-decoration: none; 
+}
+.header nav a:hover{
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
   align-items: center;
+  border: 1px solid hotpink;
 }
-header nav a:hover {
+/* header nav a:hover {
   display: inline-block;
   text-decoration: none;
   color: black;
   text-transform: uppercase;
   padding: 1rem;
   transition: all 300ms ease;
-}
+} */
 
 .flexbox-conatiner{
   display: flex;
-  flex-direction: row;
+  flex-direction:column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
+.clothing-list{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
 .clothes{
   /* flex-basis: 33%; */
   display: flex;
-  flex-direction: row;
-  padding: 2rem 0;
+  flex-direction:column;
+  /* padding:5%; */
+  /* padding: right 0;; */
   text-align: center;
 }
 
 .clothes img {
   margin: auto;
-  max-height: 400px;
-  max-width: 400px;
-  flex-basis:10%;
+  max-height: 200px;
+  max-width: 200px;
+  flex-basis: 5%;
   flex-wrap:wrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: baseline;
   display:inline-flex;
+
 }
 
 .clothes h3,
-.clothes h1,
+.clothes h1{
+  margin: 0;
+  flex-grow: 5;
+  flex-direction:column;
+  text-align: center;
+  flex-basis: 40%;
+  align-items: stretch;
+  font-size: 10px;
+
+}
 .clothes h4 {
   margin: 0;
   flex-wrap: wrap;
-  flex-direction:row;
+  flex-direction:column;
   text-align: center;
-  flex-basis: 15%;
-  padding:0;
+  flex-basis: 10%;
   align-items: stretch;
+
+}
+.clothes img{
+  border : 3px solid plum;
 }
 .add-clothing{
   display:grid;
   grid-template-columns: auto;
+  grid-row-start: 3;
+  grid-column-start:1;
   flex-basis: auto;
   justify-content: center;
   border-radius: 100%;
   text-align: justify;
 }
-.nav{
-  flex-direction: column;
-  justify-content:space-between;
+.add-button{
+  grid-column:2;
+  grid-row:3 span 2;
+  align-items: center;
 }
+
+
 .cart {
 	width: 600px;
 	height: 100%;
@@ -90,4 +136,4 @@ header nav a:hover {
 	transition: all 0.3s ease;
 	transform: translateX(-600px);
 	padding: 1.5rem 3rem 2rem;
-}
+} 

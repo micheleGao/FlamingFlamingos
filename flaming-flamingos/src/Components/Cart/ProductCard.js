@@ -24,6 +24,9 @@ function ProductCard({ items, addToCart, index, action,  }) {
         <li className='card'>
             <div className='description'>
                 {apparels && apparels.map((apparel, id)=>{
+                    if(addToCart){
+                        console.log('added from cart')
+                    }
                     return(
                         <div className="cart-items" key={id}>
                         <h2>{apparel.price}</h2>

@@ -1,23 +1,22 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Header() {
-  
-    return (
-      <div className="header">
-        <h1>Flaming flaming hot!</h1>
-        <p>Welcome!</p>
-        <img src="https://i.ibb.co/s1bWhfx/flaming-FLAMINGOS-Logo.jpg" alt="flaming-FLAMINGOS-Logo"/>
-        <img src="https://i0.wp.com/www.pinkflamingoawnings.com/wp-content/uploads/2018/01/buy-now.png?w=1080"alt="contact-us"/>
-        <nav className="nav">
-          This is where all the links go
-            <ul>
-            <p><Link to="/">Home</Link></p>
-            <p><Link to="/clothing">Clothing</Link></p>
-            <p><Link to="/Random">Have some random fun!</Link></p>
-            {/* <h1><Link to="/Miscellaneous">Miscellaneous</Link></h1> */}
-            <p><Link to="/jewelry">Jewelry</Link></p>
-            <p><Link to="/productslist">All Products</Link></p>
-            <p><Link to="/cart">
+
+  return (
+    <div className="header">
+      <h1>STYLE, SQUAWK, SMILE!</h1>
+      <img className="flamingo=logo"src="https://i.ibb.co/s1bWhfx/flaming-FLAMINGOS-Logo.jpg" alt="flaming-FLAMINGOS-Logo" />
+      <nav className="nav">
+        This is where all the links go
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/clothing">Clothing</Link></li>
+          <li><Link to="/Random">Have some random fun!</Link></li>
+          {/* <h1><Link to="/Miscellaneous">Miscellaneous</Link></h1> */}
+          <li><Link to="/jewelry">Jewelry</Link></li>
+          <li><Link to="/productslist">All Products</Link></li>
+          <li>
+            <Link to="/cart">
               <button>
                 <img
                   width='30'
@@ -25,12 +24,13 @@ function Header() {
                   alt='Shopping cart icon'
                 />
               </button>
-              </Link></p>
-          </ul>
-        </nav>
-  
-      </div>
-    );
-  }
-  
-  export default Header;
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  );
+}
+
+export default Header;

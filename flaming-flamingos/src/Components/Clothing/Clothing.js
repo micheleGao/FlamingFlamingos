@@ -26,10 +26,11 @@ function Clothing({items}) {
                     return(
                         <div className="clothes" key={id}>
                             <img src={apparel.image}/>
+                            <p className="add-button"><button className="add-clothing" onClick={handleClick}>ADD</button></p>
                             <h1>{apparel.price}</h1>
                             <h3>{apparel.title}</h3>
-                            <h4>{apparel.category}</h4>
-                            <p><button className="add-clothing" onClick={handleClick}>ADD</button></p>
+                            {/* <h4>{apparel.category}</h4> */}
+                            
                         </div>
                     )}
                 )}  
