@@ -12,7 +12,7 @@ function Header() {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/clothing">Clothing</Link></li>
           <li><Link to="/Random">Have some random fun!</Link></li>
-          {/* <h1><Link to="/Miscellaneous">Miscellaneous</Link></h1> */}
+          <li><Link to="/electronics">Electronics</Link></li>
           <li><Link to="/jewelry">Jewelry</Link></li>
           <li><Link to="/productslist">All Products</Link></li>
           <li>

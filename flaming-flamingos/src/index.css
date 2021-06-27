@@ -60,7 +60,7 @@ li{
   display:flex;
   flex-direction:row;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 .clothes{
   /* flex-basis: 33%; */
@@ -117,23 +117,20 @@ li{
   border-radius: 100%;
   text-align: justify;
 }
+
 .add-button{
   grid-column:2;
   grid-row:3 span 2;
   align-items: center;
 }
+.smaller-container{
+  flex-wrap: nowrap;
+  margin: 0;
+  /* flex-wrap: wrap; */
+  flex-direction:column;
+  text-align: center;
+  flex-basis: 10%;
+  align-items: stretch;
+  
+}
 
-
-.cart {
-	width: 600px;
-	height: 100%;
-	background-color: white;
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 20px 0;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-	transform: translateX(-600px);
-	padding: 1.5rem 3rem 2rem;
-} 

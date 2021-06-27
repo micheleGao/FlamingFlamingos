@@ -1,23 +1,23 @@
-import './App.css';
-import { useState, useEffect, useReducer} from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+// import './App.css';
+import { useState, useEffect, useReducer, createContext } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Header from './Components/Header/Header';
-import BodyImage from './Components/BodyImage/BodyImage';
 import Clothing from './Components/Clothing/Clothing';
 import Home from "./Components/Home/Home";
 import Jewelry from './Components/Jewlery/Jewelry';
-import ProductsList from './Components/ProductsList/ProductsList';
-import Music from './Components/Music/Music';
+import ProductsList from './Components/ProductList/ProductList';
 import Random from './Components/Random/Random';
 import Cart from './Components/Cart/Cart';
-import ProductCard from './Components/Cart/ProductCard';
+import Electronics from './Components/Electronics/Electronics';
+
+export const DataContext = createContext();
+console.log(DataContext);
 
 function App() {
+  //getters and setters for the api calls.
   const [items, setItems] = useState([])
-  const [ricks, setRick]=useState([]);
-  console.log(items);
-  
-  
+  const [ricks, setRick] = useState([]);
+  //calling api
   const getItems = async () => {
     try {
       const response = await fetch('https://fakestoreapi.com/products');
@@ -25,13 +25,16 @@ function App() {
       setItems(data);
       console.log(data);
     } catch (error) {
-      console.log(error);
+      console.log("There appears to be an error",error );
     }
   };
+  //hook
   useEffect(() => {
     getItems();
   }, [])
 
+
+  //useReducer to add functionality to the cart component.
   const cartReducer = (state, action) => {
     switch (action.type) {
       case 'ADD':
@@ -45,67 +48,45 @@ function App() {
         return state;
     }
   }
-  
-  const [cartOpen, setCartOpen] = useState(false);
-  const [cartItems, updateCartItems] = useReducer(cartReducer, []);
+
+  const [cartItems, dispatchCartItems] = useReducer(cartReducer, []);
 
   const addProductToCart = (index) => {
-    updateCartItems({ type: 'ADD', value: items[index] });
-    setCartOpen(true);
+    dispatchCartItems({ type: 'ADD', value: items[index] });
   }
   const removeProductToCart = (index) => {
-    updateCartItems({ type: 'REMOVE', value: index });
+    dispatchCartItems({ type: 'REMOVE', value: index });
   }
 
   return (
-    <div className="App">
-      <h1>
-        FLAMING Flamingos!
-      </h1>
-      <nav>
-      <Header />
-      <Music/>
-      </nav>
-      <main>
-        <Switch>
-        <Route path="/" exact component={Home}/>
-          {/* <Route path="/" exact component={BodyImage}/> */}
-          {/* // <Route path="/shoes" render={()=><Shoes Shoes={Shoes}/> */}
-          <Route path="/random" render ={()=><Random ricks={ricks} />}/>
-          <Route path="/clothing" exact render={() => <Clothing items={items}/> } />
-          <Route path="/productslist" exact render={() => <ProductsList items={items}/> } />
-          <Route path="/jewelry"  exact render={()=> <Jewelry items={items}/>}/>
-          {/* <Route path="/productslist" component={ProductsList} items={items} /> */}
-          <Route path='/cart' exact render={()=>
-                <Cart 
-                  addProductToCart={addProductToCart}
-                  removeProductToCart={removeProductToCart}
-                  cartItems={cartItems}
-                  cartOpen={cartOpen} 
-                  setCartOpen={setCartOpen} 
+    <DataContext.Provider value={{addProductToCart, removeProductToCart, cartItems, items, setItems}}>
+      <div className="App">
+        <h1>Flaming Flamingos</h1>
+        <nav className="Header-Component">
+          <Header />
+        </nav>
+        <main>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            {/* // <Route path="/shoes" render={()=><Shoes Shoes={Shoes}/> */}
+            <Route path="/random" render={() => <Random ricks={ricks} />} />
+            <Route path="/clothing" render={() => <Clothing items={items} />} />
+            <Route path="/productslist"  render={() => <ProductsList items={items} />} />
+            <Route path="/jewelry" render={() => <Jewelry items={items} />} />
+            <Route path="/electronics" render={() => <Electronics items={items} />} />
+            {/* <Route path="/productslist" component={ProductsList} items={items} /> */}
+            
+            <Route path='/cart' render={() =>
+              <Cart
+                addProductToCart={addProductToCart}
+                removeProductToCart={removeProductToCart}
+                cartItems={cartItems}
               />
-          }/>
-          <ul>
-          {
-            items.length > 0 ? (
-              items.map((item, i) => (
-                <ProductCard
-                  key={i}
-                  index={i}
-                  addToCart={addProductToCart}
-                  product={item}
-                />
-              ))
-            ) : (
-              <div>Loading...</div>
-            )
-          }
-        </ul>
-        </Switch>
-
-      </main>
-
-    </div>
+            } />
+          </Switch>
+        </main>
+      </div>
+    </DataContext.Provider>
   );
 }
 

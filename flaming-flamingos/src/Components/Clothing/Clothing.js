@@ -1,6 +1,14 @@
 // import ProductsList from '../ProductsList/ProductsList';
-import { useState, useEffect, useReducer } from 'react';
+import { useContext } from 'react';
+import {DataContext} from 'react';
+
+
 function Clothing({items}) {
+
+  const data = useContext(DataContext);
+  console.log(data);
+
+
   console.log(items)
   if (items.length <= 0) {
     return "loading..."
