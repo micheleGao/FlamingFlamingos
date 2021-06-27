@@ -10,7 +10,7 @@ import Random from './Components/Random/Random';
 import Cart from './Components/Cart/Cart';
 import Electronics from './Components/Electronics/Electronics';
 
-export const DataContext = createContext();
+export const DataContext = createContext(Cart);
 console.log(DataContext);
 
 function App() {
@@ -69,13 +69,12 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             {/* // <Route path="/shoes" render={()=><Shoes Shoes={Shoes}/> */}
-            <Route path="/random" render={() => <Random ricks={ricks} />} />
+            <Route path="/random" render={() => <Random ricks={ricks} setRick={setRick}/>} />
             <Route path="/clothing" render={() => <Clothing items={items} />} />
             <Route path="/productslist"  render={() => <ProductsList items={items} />} />
             <Route path="/jewelry" render={() => <Jewelry items={items} />} />
             <Route path="/electronics" render={() => <Electronics items={items} />} />
             {/* <Route path="/productslist" component={ProductsList} items={items} /> */}
-            
             <Route path='/cart' render={() =>
               <Cart
                 addProductToCart={addProductToCart}

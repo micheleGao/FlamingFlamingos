@@ -5,11 +5,6 @@ import {DataContext} from 'react';
 
 function Clothing({items}) {
 
-  const data = useContext(DataContext);
-  console.log(data);
-
-
-  console.log(items)
   if (items.length <= 0) {
     return "loading..."
   }
@@ -33,7 +28,7 @@ function Clothing({items}) {
                 {apparels && apparels.map((apparel, id)=>{
                     return(
                         <div className="clothes" key={id}>
-                            <img src={apparel.image}/>
+                            <img src={apparel.image} alt=""/>
                             <p className="add-button"><button className="add-clothing" onClick={handleClick}>ADD</button></p>
                             <h1>{apparel.price}</h1>
                             <h3>{apparel.title}</h3>

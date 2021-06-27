@@ -7,7 +7,7 @@ export default function Electronics({ items }) {
     //if clothing is equal to category. create a div with the following images, price. and title
     const electronics = items.filter((item) => {
         return (
-            (item.category === "electronics") || (item.category === "women's clothing")
+            (item.category === "electronics") 
         )
     }
     )
@@ -20,11 +20,11 @@ export default function Electronics({ items }) {
     return (
         <div className="flexbox-container">
             <h2> Electronics</h2>
-            <div className="Electronic-list">
+            <div className="electronic-list">
                 {electronics && electronics.map((electronic, id) => {
                     return (
                         <div className="electronics" key={id}>
-                            <img src={electronic.image} />
+                            <img src={electronic.image} alt="" />
                             <p className="add-button"><button className="add-clothing" onClick={handleClick}>ADD</button></p>
                             <h1>{electronic.price}</h1>
                             <h3>{electronic.title}</h3>

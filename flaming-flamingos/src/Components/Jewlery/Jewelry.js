@@ -17,8 +17,8 @@ function Jewelry({items}) {
                 {jewels && jewels.map((jewel, id) => {
                     return (
                         <div className="jewelery" key={id} >
-                           <h1>{jewel.title}</h1>
                            <img src={jewel.image} alt="jewelery"/>
+                           <h1>{jewel.title}</h1>
                            <h2>{jewel.price}</h2>
                            <p><button>ADD TO CART</button></p>
                         </div>

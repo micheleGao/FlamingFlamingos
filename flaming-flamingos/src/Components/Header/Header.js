@@ -11,10 +11,10 @@ function Header() {
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/clothing">Clothing</Link></li>
-          <li><Link to="/Random">Have some random fun!</Link></li>
           <li><Link to="/electronics">Electronics</Link></li>
           <li><Link to="/jewelry">Jewelry</Link></li>
           <li><Link to="/productslist">All Products</Link></li>
+          <li><Link to="/Random">Have some random fun!</Link></li>
           <li>
             <Link to="/cart">
               <button>

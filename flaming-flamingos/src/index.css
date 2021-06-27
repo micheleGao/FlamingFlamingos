@@ -20,10 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 }
-/* img{
-  height: 40%;
-  width:40%;
-} */
+
 ul{
   list-style: none;
 }
@@ -56,81 +53,96 @@ li{
   justify-content: space-around;
   align-items: center;
 }
+
 .clothing-list{
   display:flex;
   flex-direction:row;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 1rem 1rem 1rem 1rem;
 }
+
 .clothes{
-  /* flex-basis: 33%; */
   display: flex;
   flex-direction:column;
-  /* padding:5%; */
-  /* padding: right 0;; */
   text-align: center;
 }
-
+.rick img,
+.jewelery-list img,
+.electronic-list img, 
 .clothes img {
+  display:flex;
   margin: auto;
-  max-height: 200px;
-  max-width: 200px;
-  flex-basis: 5%;
+  max-height: 300px;
+  max-width: 300px;
+  flex-basis: 33%;
   flex-wrap:wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
-  display:inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: justify;
+} 
+  
+  /* display:inline-flex;
 
-}
-
+.electronic-list h3,
+.electronic-list h1,
 .clothes h3,
 .clothes h1{
   margin: 0;
-  flex-grow: 5;
+  flex-grow:1;
   flex-direction:column;
-  text-align: center;
-  flex-basis: 40%;
-  align-items: stretch;
-  font-size: 10px;
+  /* text-align: center; */
+  /* flex-basis: 40%; */
+  /* align-items: stretch; */
+  /* font-size: 10px;
 
-}
+} */
+.jewelery-list,
+.electronic-list,
 .clothes h4 {
   margin: 0;
   flex-wrap: wrap;
   flex-direction:column;
   text-align: center;
   flex-basis: 10%;
-  align-items: stretch;
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
 
 }
-.clothes img{
-  border : 3px solid plum;
-}
-.add-clothing{
-  display:grid;
-  grid-template-columns: auto;
-  grid-row-start: 3;
-  grid-column-start:1;
-  flex-basis: auto;
-  justify-content: center;
-  border-radius: 100%;
-  text-align: justify;
+.clothes,
+.electronics,
+.clothes{
+  display:flex;
+  flex-wrap: wrap;
+  /* border? */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
+  padding: 1rem 1rem 1rem 1rem;
+  flex-basis: 33% ;
 }
 
 .add-button{
   grid-column:2;
   grid-row:3 span 2;
   align-items: center;
+  justify-content: space-evenly;
 }
-.smaller-container{
-  flex-wrap: nowrap;
-  margin: 0;
-  /* flex-wrap: wrap; */
+.jewelery-list,
+.electronic-list,
+.rick-list{
+  display:flex;
   flex-direction:column;
+  margin: 0;
+  flex-direction:row;
   text-align: center;
   flex-basis: 10%;
-  align-items: stretch;
-  
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: space-evenly;
 }
+
+
+
+
 

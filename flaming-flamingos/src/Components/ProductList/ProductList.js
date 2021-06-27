@@ -15,7 +15,7 @@ function ProductsList({items}) {
                             <p className="add-button"><button className="add-clothing" onClick={handleClick}>ADD</button></p>
                             <h1>{item.price}</h1>
                             <h3>{item.title}</h3>
-                            <h4>{item.category}</h4>
+                            {/* <h4>{item.category}</h4> */}
                             
                         </div>
                     )

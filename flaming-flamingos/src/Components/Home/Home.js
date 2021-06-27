@@ -1,4 +1,4 @@
-import BodyImage from "../BodyImage/BodyImage";
+import BodyImage from "./BodyImage/BodyImage";
 export default function Home(){
     return(
         <div>

@@ -29,7 +29,7 @@ function Random() {
                 {ricks && ricks.map((rick, id)=>{
                     return(
                         <div className="rick" key={id}>
-                          <h1>Just a litle fun!</h1>
+                          <h1>{rick.name}</h1>
                            <img src={rick.image} alt="Random Rick"/>
                         </div>
                     )}
