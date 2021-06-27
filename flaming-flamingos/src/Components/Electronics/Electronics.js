@@ -1,5 +1,5 @@
 
-export default function Electronics({ items }) {
+export default function Electronics({ items, onAdd }) {
     console.log(items)
     if (items.length <= 0) {
         return "loading..."
@@ -13,9 +13,9 @@ export default function Electronics({ items }) {
     )
     console.log(electronics);
 
-    function handleClick() {
-        console.log('button from Electronics page');
-    }
+    // function handleClick() {
+    //     console.log('button from Electronics page');
+    // }
 
     return (
         <div className="flexbox-container">
@@ -25,8 +25,8 @@ export default function Electronics({ items }) {
                     return (
                         <div className="electronics" key={id}>
                             <img src={electronic.image} alt="" />
-                            <p className="add-button"><button className="add-clothing" onClick={handleClick}>ADD</button></p>
-                            <h1>{electronic.price}</h1>
+                            <p className="add-button"><button className="add-clothing">ADD</button></p>
+                            <h1> $ {electronic.price}</h1>
                             <h3>{electronic.title}</h3>
                             {/* <h4>{apparel.category}</h4> */}
 

@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import {DataContext} from 'react';
 
 
-function Clothing({items}) {
+function Clothing({items, onAdd}) {
 
   if (items.length <= 0) {
     return "loading..."
@@ -14,11 +14,11 @@ function Clothing({items}) {
       (item.category === "men's clothing") ||(item.category === "women's clothing")
     )}
   )
-  console.log(apparels);
+  // console.log(apparels);
 
-  function handleClick(){
-    console.log('button from clothing page');
-  }
+  // function handleClick(){
+  //   console.log('button from clothing page');
+  // }
 
 
   return (
@@ -29,8 +29,8 @@ function Clothing({items}) {
                     return(
                         <div className="clothes" key={id}>
                             <img src={apparel.image} alt=""/>
-                            <p className="add-button"><button className="add-clothing" onClick={handleClick}>ADD</button></p>
-                            <h1>{apparel.price}</h1>
+                            <p className="add-button"><button className="add-clothing">ADD TO CART</button></p>
+                            <h1>$ {apparel.price}</h1>
                             <h3>{apparel.title}</h3>
                             {/* <h4>{apparel.category}</h4> */}
                             

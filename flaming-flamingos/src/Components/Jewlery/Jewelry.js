@@ -1,5 +1,5 @@
 
-function Jewelry({items}) {
+function Jewelry({items, onAdd}) {
     if(items.length <= 0){
         return "loading...."
     } 
@@ -19,8 +19,8 @@ function Jewelry({items}) {
                         <div className="jewelery" key={id} >
                            <img src={jewel.image} alt="jewelery"/>
                            <h1>{jewel.title}</h1>
-                           <h2>{jewel.price}</h2>
-                           <p><button>ADD TO CART</button></p>
+                           <h2> $ {jewel.price}</h2>
+                           <p><button onClick={onAdd}>ADD TO CART</button></p>
                         </div>
                     )
                 })}

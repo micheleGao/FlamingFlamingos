@@ -36,6 +36,10 @@ li{
   justify-content: space-between; 
   align-items: center;
   border: 1px solid hotpink;
+ 
+}
+a{
+  text-decoration: none;
 }
 /* header nav a:hover {
   display: inline-block;
