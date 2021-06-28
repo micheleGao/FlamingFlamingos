@@ -1,16 +1,15 @@
-import {useState, useEffect, useReducer,useContext } from 'react';
+import {useContext} from 'react';
 import {DataContext} from '../../App';
 
 function ProductsList({items}) {
   const cartData = useContext(DataContext);
   console.log({cartData});
   console.log(items)
-  // function handleClick(){
-  //   console.log('button from all products page');
-  // }
+ if (items.length ===0){
+   return "Loading...."
+ }
     return (
       <div className="flexbox-container">
-        <h1>This is the Products Listed</h1>
         <div className="clothing-list">
                 {items && items.map((item, id)=>{
                     // console.log(item)
@@ -19,9 +18,7 @@ function ProductsList({items}) {
                             <img src={item.image} alt="clothing"/>
                             <p className="add-button"><button onClick={()=>cartData.addProductToCart(item)}className="add-clothing" >ADD TO CART</button></p>
                             <p>$ {item.price}</p>
-                            <p>{item.title}</p>
-                            {/* <h4>{item.category}</h4> */}
-                            
+                            <p>{item.title}</p>  
                         </div>
                     )
                 })}  

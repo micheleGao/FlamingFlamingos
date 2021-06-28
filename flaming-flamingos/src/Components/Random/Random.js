@@ -24,12 +24,12 @@ function Random() {
   }
     return (
       <div className="flexbox-container">
-        <h1>What is going here?</h1>
+        <h1>Here's a collection of Ricky & Morty episode photos!</h1>
         <div className="rick-list">
                 {ricks && ricks.map((rick, id)=>{
                     return(
                         <div className="rick" key={id}>
-                          <h1>{rick.name}</h1>
+                          <p>{rick.name}</p>
                            <img src={rick.image} alt="Random Rick"/>
                         </div>
                     )}

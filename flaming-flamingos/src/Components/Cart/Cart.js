@@ -29,10 +29,9 @@ const Cart = () => {
 
     return (
         <div>
-            <h2>Cart</h2>
-            <div>
-                {cartData.cartItems.length ===0 && <div>Cart is empty </div>}
-                
+            <h2> Your Cart</h2>
+            <div className="empty">
+                {cartData.cartItems.length ===0 && <div>Cart is empty </div>}   
             </div>
             {cartData.cartItems.map((item, id)=>
             <div className="cart"key={id}>
@@ -76,6 +75,4 @@ const Cart = () => {
         // </div>
     );
 };
-
 export default Cart;
-//={`cart ${cartOpen === true ? 'open' : 'closed'}`}

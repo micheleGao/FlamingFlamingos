@@ -1,7 +1,14 @@
-
+import { useState} from 'react';
+import {Redirect} from 'react-router-dom';
 export default function Pay(){
-    function handleConfirm(){
-        alert("Thank you for your purchase")
+    const [redirect, setRedirect]=useState(false);
+    if (redirect) {
+        return (<Redirect to='/'/>)
+    }
+    function handleConfirm(event){
+        event.preventDefault();
+        // alert("Thank you for your purchase")
+        setRedirect(true)
     }
     return(
         <div>
@@ -23,11 +30,11 @@ export default function Pay(){
                     <input type="text"></input>
                 </div>
                 <div>
-                    <label forHTML="3-digit"> 3- digit Security code (on the back of your card) :</label>
+                    <label forHTML="3-digit" > 3- digit Security code (on the back of your card) :</label>
                     <input type="text"></input>
                 </div>
                 <div>
-                    <label forHTML="zip"> 5- digit Zipcode:</label>
+                    <label forHTML="zip" > 5- digit Zipcode:</label>
                     <input type="text"></input> 
                 </div>
                 <div>

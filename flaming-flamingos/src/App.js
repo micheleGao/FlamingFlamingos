@@ -1,6 +1,6 @@
 // import './App.css';
 import { useState, useEffect, useReducer, createContext } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Clothing from './Components/Clothing/Clothing';
 import Home from "./Components/Home/Home";
@@ -15,6 +15,8 @@ export const DataContext = createContext();
 console.log(DataContext);
 
 function App() {
+  //redirects
+  const [redirect, setRedirect]=useState(false)
   //getters and setters for the api calls.
   const [items, setItems] = useState([])
   const [ricks, setRick] = useState([]);
@@ -26,13 +28,18 @@ function App() {
       setItems(data);
       console.log(data);
     } catch (error) {
-      console.log("There appears to be an error",error );
+      console.log("There appears to be an error", error );
     }
   };
   //hook
   useEffect(() => {
     getItems();
   }, [])
+
+  useEffect(()=>{
+    setRedirect(false);
+  },[redirect])
+
 
   //useReducer to add functionality to the cart component.
   const cartReducer = (state, action) => {
@@ -81,7 +88,7 @@ function App() {
                 cartItems={cartItems}
               />
             } />
-            <Route path="/pay" render={()=> <Pay />}/>
+            <Route path="/pay" render={()=> <Pay redirect={redirect}/>}/>
           </Switch>
         </main>
       </div>
