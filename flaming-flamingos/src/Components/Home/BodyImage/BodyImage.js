@@ -5,10 +5,9 @@ function BodyImage() {
         <div className="body-image">
           <header className="body-content">
             <h1>Rocking!</h1>
-            <div className="flamingo-logo">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/61t4acoJrGL._AC_SX466_.jpg" alt="Flamingo"/>
+            <div className="flamingo">
+            <img className="flamingo-logo"src="https://i.ibb.co/s1bWhfx/flaming-FLAMINGOS-Logo.jpg" alt="flaming-FLAMINGOS-Logo"  width="300px"/>
             </div>
-          <img src="https://chuckbauman.com/Line-of-Fire-for-car-hood%20flames.jpg" alt="flames"/>
           </header>
         </div>
 

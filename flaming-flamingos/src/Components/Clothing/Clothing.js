@@ -32,8 +32,8 @@ function Clothing({items, onAdd}) {
                         <div className="clothes" key={id}>
                             <img src={apparel.image} alt=""/>
                             <p className="add-button"><button onClick={()=>cartData.addProductToCart(apparel)} className="add-clothing">ADD TO CART</button></p>
-                            <h1>$ {apparel.price}</h1>
-                            <h3>{apparel.title}</h3>
+                            <p>$ {apparel.price}</p>
+                            <p>{apparel.title}</p>
                             {/* <h4>{apparel.category}</h4> */}
                             
                         </div>

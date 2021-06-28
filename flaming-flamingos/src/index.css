@@ -2,16 +2,15 @@
 *{ box-sizing:border-box}
 *:before,
 *:after {
-	box-sizing:inherit ;
+	box-sizing:inherit;
 }
 body {
   margin: 0;
   text-align: center;
-  color:deeppink;
+  color:hsl(hue, saturation, lightness);
   font-family: 'Playball', cursive, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 ul{
@@ -19,22 +18,22 @@ ul{
 }
 li{
   display:inline-block;
-  padding: 30px 30px 30px 30px;
-  font-size: 20px;
+  padding: 40px 40px 40px 40px;
+  font-size:20px;
   text-decoration: none; 
 }
 .header nav a:hover{
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-evenly; 
   align-items: center;
   border: 1px solid hotpink;
  
 }
 nav{
   position:sticky;
-  top: 0;
-  background-color:azure;
+  top:0;
+  background-color: aliceblue;
 }
 a{
   text-decoration: none;
@@ -47,6 +46,10 @@ a{
   padding: 1rem;
   transition: all 300ms ease;
 } */
+
+.body-image{
+  opacity: 0.7;
+}
 
 .flexbox-conatiner{
   display: flex;
@@ -78,6 +81,7 @@ a{
   max-height: 300px;
   max-width: 300px;
   flex-basis: 33%;
+  padding:none;
   flex-wrap:wrap;
   flex-direction: column;
   justify-content: space-evenly;
@@ -102,7 +106,7 @@ a{
 } */
 .jewelery-list,
 .electronic-list,
-.clothes h4 {
+.clothes p {
   margin: 0;
   flex-wrap: wrap;
   flex-direction:column;
@@ -143,25 +147,53 @@ a{
   justify-content: space-between;
   justify-content: space-evenly;
 }
+/* .cart{
+
+} */
+
 @media only screen and (max-width: 500px) {
   body {
-    background-color: lightpink;
+    background-color:white;
   }
   .clothes,
   .electronics,
   .clothes{
-    
     flex-basis: 40%;
     width:45%
-  } 
+  }
+  ul{
+    list-style: none;
+  }
+  li{
+    display:inline-block;
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+    text-decoration: none; 
+  }
+  .rick img,
+  .jewelery-list img,
+  .electronic-list img, 
+  .clothes img {
+    display:flex;
+    margin: auto;
+    max-height: 75px;
+    max-width: 75px;
+    flex-basis: 33%;
+
+  }
+
 }
 
 
+
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class="clothing-list"] {
+  .clothes,
+  .electronics,
+  .clothes{
+    flex-basis: 40%;
+    width:45%
+  } 
   
-  }
 }
 
 

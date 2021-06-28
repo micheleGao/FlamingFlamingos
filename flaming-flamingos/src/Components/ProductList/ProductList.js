@@ -17,9 +17,9 @@ function ProductsList({items}) {
                     return(
                         <div className="clothes" key={id}>
                             <img src={item.image} alt="clothing"/>
-                            <p className="add-button"><button onClick={()=>cartData.addProductToCart(item)}className="add-clothing" >ADD</button></p>
-                            <h1>$ {item.price}</h1>
-                            <h3>{item.title}</h3>
+                            <p className="add-button"><button onClick={()=>cartData.addProductToCart(item)}className="add-clothing" >ADD TO CART</button></p>
+                            <p>$ {item.price}</p>
+                            <p>{item.title}</p>
                             {/* <h4>{item.category}</h4> */}
                             
                         </div>

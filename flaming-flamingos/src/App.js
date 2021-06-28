@@ -9,6 +9,7 @@ import ProductsList from './Components/ProductList/ProductList';
 import Random from './Components/Random/Random';
 import Cart from './Components/Cart/Cart';
 import Electronics from './Components/Electronics/Electronics';
+ import Pay from './Components/Cart/Pay';
 
 export const DataContext = createContext();
 console.log(DataContext);
@@ -41,8 +42,8 @@ function App() {
         return [...state, action.value];
       case 'REMOVE':
         return [
-          ...state.slice(0, action.value),
-          ...state.slice(action.value + 1),
+          ...state.slice(0,action.value),
+           ...state.slice(action.value + 1),
         ];
       default:
         return state;
@@ -52,10 +53,10 @@ function App() {
   const [cartItems, dispatchCartItems] = useReducer(cartReducer, []);
 
   const addProductToCart = (index) => {
-    dispatchCartItems({ type: 'ADD', value: index });
+    dispatchCartItems({ type: 'ADD', value: index});
   }
   const removeProductToCart = (index) => {
-    dispatchCartItems({ type: 'REMOVE', value: index });
+    dispatchCartItems({ type: 'REMOVE', value: index});
   }
 
   return (
@@ -77,10 +78,10 @@ function App() {
             {/* <Route path="/productslist" component={ProductsList} items={items} /> */}
             <Route path='/cart' render={() =>
               <Cart
-               
                 cartItems={cartItems}
               />
             } />
+            <Route path="/pay" render={()=> <Pay />}/>
           </Switch>
         </main>
       </div>

@@ -25,9 +25,9 @@ export default function Electronics({ items}) {
                     return (
                         <div className="electronics" key={id}>
                             <img src={electronic.image} alt="" />
-                            <p className="add-button"><button onClick={()=>cartData.addProductToCart(electronic)}className="add-clothing">ADD</button></p>
-                            <h1> $ {electronic.price}</h1>
-                            <h3>{electronic.title}</h3>
+                            <p className="add-button"><button onClick={()=>cartData.addProductToCart(electronic)}className="add-clothing">ADD TO CART</button></p>
+                            <p> $ {electronic.price}</p>
+                            <p>{electronic.title}</p>
                             {/* <h4>{apparel.category}</h4> */}
 
                         </div>

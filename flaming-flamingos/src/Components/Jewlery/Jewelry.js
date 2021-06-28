@@ -20,8 +20,8 @@ console.log(cartData)
                     return (
                         <div className="jewelery" key={id} >
                            <img src={jewel.image} alt="jewelery"/>
-                           <h1>{jewel.title}</h1>
-                           <h2> $ {jewel.price}</h2>
+                           <p>{jewel.title}</p>
+                           <p> $ {jewel.price}</p>
                            <p><button onClick={()=>cartData.addProductToCart(jewel)}>ADD TO CART</button></p>
                         </div>
                     )
