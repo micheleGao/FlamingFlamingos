@@ -1,5 +1,10 @@
-import {useState, useEffect, useReducer} from 'react';
+import {useState, useEffect, useReducer,useContext } from 'react';
+import {DataContext} from '../../App';
+
 function ProductsList({items}) {
+  const cartData = useContext(DataContext);
+  console.log({cartData});
+  console.log(items)
   // function handleClick(){
   //   console.log('button from all products page');
   // }
@@ -12,7 +17,7 @@ function ProductsList({items}) {
                     return(
                         <div className="clothes" key={id}>
                             <img src={item.image} alt="clothing"/>
-                            <p className="add-button"><button className="add-clothing" >ADD</button></p>
+                            <p className="add-button"><button onClick={()=>cartData.addProductToCart(item)}className="add-clothing" >ADD</button></p>
                             <h1>$ {item.price}</h1>
                             <h3>{item.title}</h3>
                             {/* <h4>{item.category}</h4> */}

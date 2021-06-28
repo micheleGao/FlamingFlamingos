@@ -10,7 +10,7 @@ import Random from './Components/Random/Random';
 import Cart from './Components/Cart/Cart';
 import Electronics from './Components/Electronics/Electronics';
 
-export const DataContext = createContext(Cart);
+export const DataContext = createContext();
 console.log(DataContext);
 
 function App() {
@@ -32,48 +32,34 @@ function App() {
   useEffect(() => {
     getItems();
   }, [])
-//creating cart useState:
-  const [cartItems, setCartItems]=useState([]);
-  const onAdd=(items)=>{
-    const exist = cartItems.find(x=>x.id===items.id);
-    if (exist){
-      setCartItems(
-        cartItems.map((x)=>
-          x.id === items.id ? {...exist, qty: exist.qty + 1 }:x
-        )
-      );
-    }else{
-      setCartItems([...cartItems, {...items, qty: 1 }]);
+
+  //useReducer to add functionality to the cart component.
+  const cartReducer = (state, action) => {
+    switch (action.type) {
+      case 'ADD':
+        console.log(state)
+        return [...state, action.value];
+      case 'REMOVE':
+        return [
+          ...state.slice(0, action.value),
+          ...state.slice(action.value + 1),
+        ];
+      default:
+        return state;
     }
   }
 
+  const [cartItems, dispatchCartItems] = useReducer(cartReducer, []);
 
-  //useReducer to add functionality to the cart component.
-  // const cartReducer = (state, action) => {
-  //   switch (action.type) {
-  //     case 'ADD':
-  //       return [...state, action.value];
-  //     case 'REMOVE':
-  //       return [
-  //         ...state.slice(0, action.value),
-  //         ...state.slice(action.value + 1),
-  //       ];
-  //     default:
-  //       return state;
-  //   }
-  // }
-
-  // const [cartItems, dispatchCartItems] = useReducer(cartReducer, []);
-
-  // const addProductToCart = (index) => {
-  //   dispatchCartItems({ type: 'ADD', value: items[index] });
-  // }
-  // const removeProductToCart = (index) => {
-  //   dispatchCartItems({ type: 'REMOVE', value: index });
-  // }
+  const addProductToCart = (index) => {
+    dispatchCartItems({ type: 'ADD', value: index });
+  }
+  const removeProductToCart = (index) => {
+    dispatchCartItems({ type: 'REMOVE', value: index });
+  }
 
   return (
-    // <DataContext.Provider value={{cartItems, setItems}}>
+    <DataContext.Provider value={{cartItems, setItems, addProductToCart, removeProductToCart }}>
       <div className="App">
         <h1>Flaming Flamingos</h1>
         <nav className="Header-Component">
@@ -85,20 +71,20 @@ function App() {
             {/* // <Route path="/shoes" render={()=><Shoes Shoes={Shoes}/> */}
             <Route path="/clothing" render={() => <Clothing items={items} />} />
             <Route path="/productslist"  render={() => <ProductsList items={items} />} />
-            <Route path="/jewelry" render={() => <Jewelry items={items} onAdd={onAdd}/>} />
+            <Route path="/jewelry" render={() => <Jewelry items={items} />} />
             <Route path="/electronics" render={() => <Electronics items={items} />} />
             <Route path="/random" render={() => <Random ricks={ricks} setRick={setRick}/>} />
             {/* <Route path="/productslist" component={ProductsList} items={items} /> */}
             <Route path='/cart' render={() =>
               <Cart
-                onAdd={onAdd}
+               
                 cartItems={cartItems}
               />
             } />
           </Switch>
         </main>
       </div>
-    /* </DataContext.Provider> */
+     </DataContext.Provider> 
   );
 }
 

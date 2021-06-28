@@ -1,5 +1,9 @@
-
-export default function Electronics({ items, onAdd }) {
+import {useContext} from 'react';
+import { DataContext } from "../../App"
+export default function Electronics({ items}) {
+    //storing a variable for the imported context data
+    const cartData =useContext(DataContext)
+    console.log(cartData)
     console.log(items)
     if (items.length <= 0) {
         return "loading..."
@@ -13,10 +17,6 @@ export default function Electronics({ items, onAdd }) {
     )
     console.log(electronics);
 
-    // function handleClick() {
-    //     console.log('button from Electronics page');
-    // }
-
     return (
         <div className="flexbox-container">
             <h2> Electronics</h2>
@@ -25,7 +25,7 @@ export default function Electronics({ items, onAdd }) {
                     return (
                         <div className="electronics" key={id}>
                             <img src={electronic.image} alt="" />
-                            <p className="add-button"><button className="add-clothing">ADD</button></p>
+                            <p className="add-button"><button onClick={()=>cartData.addProductToCart(electronic)}className="add-clothing">ADD</button></p>
                             <h1> $ {electronic.price}</h1>
                             <h3>{electronic.title}</h3>
                             {/* <h4>{apparel.category}</h4> */}

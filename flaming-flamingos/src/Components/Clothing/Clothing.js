@@ -1,9 +1,11 @@
 // import ProductsList from '../ProductsList/ProductsList';
 import { useContext } from 'react';
-import {DataContext} from 'react';
+import {DataContext} from '../../App';
 
 
 function Clothing({items, onAdd}) {
+  const cartData = useContext(DataContext);
+  console.log(cartData)
 
   if (items.length <= 0) {
     return "loading..."
@@ -29,7 +31,7 @@ function Clothing({items, onAdd}) {
                     return(
                         <div className="clothes" key={id}>
                             <img src={apparel.image} alt=""/>
-                            <p className="add-button"><button className="add-clothing">ADD TO CART</button></p>
+                            <p className="add-button"><button onClick={()=>cartData.addProductToCart(apparel)} className="add-clothing">ADD TO CART</button></p>
                             <h1>$ {apparel.price}</h1>
                             <h3>{apparel.title}</h3>
                             {/* <h4>{apparel.category}</h4> */}

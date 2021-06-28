@@ -1,15 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
-@media only screen and (max-width: 500px) {
-  body {
-    background-color: lightpink;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class="clothing-list"] {
-    width: 100%;
-  }
+*{ box-sizing:border-box}
+*:before,
+*:after {
+	box-sizing:inherit ;
 }
 body {
   margin: 0;
@@ -37,6 +30,11 @@ li{
   align-items: center;
   border: 1px solid hotpink;
  
+}
+nav{
+  position:sticky;
+  top: 0;
+  background-color:azure;
 }
 a{
   text-decoration: none;
@@ -117,14 +115,14 @@ a{
 .clothes,
 .electronics,
 .clothes{
-  display:flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* border? */
   /* justify-content: space-between; */
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   padding: 1rem 1rem 1rem 1rem;
-  flex-basis: 33% ;
-}
+  flex-basis: 30%;
+  
+} 
 
 .add-button{
   grid-column:2;
@@ -144,6 +142,26 @@ a{
   flex-wrap: wrap;
   justify-content: space-between;
   justify-content: space-evenly;
+}
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: lightpink;
+  }
+  .clothes,
+  .electronics,
+  .clothes{
+    
+    flex-basis: 40%;
+    width:45%
+  } 
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class="clothing-list"] {
+  
+  }
 }
 
 
