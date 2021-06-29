@@ -1,6 +1,6 @@
 // import './App.css';
 import { useState, useEffect, useReducer, createContext } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Clothing from './Components/Clothing/Clothing';
 import Home from "./Components/Home/Home";

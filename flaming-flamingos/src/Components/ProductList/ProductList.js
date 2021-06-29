@@ -3,8 +3,6 @@ import {DataContext} from '../../App';
 
 function ProductsList({items}) {
   const cartData = useContext(DataContext);
-  console.log({cartData});
-  console.log(items)
  if (items.length ===0){
    return "Loading...."
  }
@@ -12,7 +10,6 @@ function ProductsList({items}) {
       <div className="flexbox-container">
         <div className="clothing-list">
                 {items && items.map((item, id)=>{
-                    // console.log(item)
                     return(
                         <div className="clothes" key={id}>
                             <img src={item.image} alt="clothing"/>

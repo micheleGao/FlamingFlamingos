@@ -17,8 +17,6 @@ function Random() {
     getRick();
   }, [])
 
-  // const RickMorty = JSON.parse(ricks)
-
   if (ricks.length <= 0) {
     return "loading..."
   }

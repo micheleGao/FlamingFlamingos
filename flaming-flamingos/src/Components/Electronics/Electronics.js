@@ -3,8 +3,6 @@ import { DataContext } from "../../App"
 export default function Electronics({ items}) {
     //storing a variable for the imported context data
     const cartData =useContext(DataContext)
-    console.log(cartData)
-    console.log(items)
     if (items.length <= 0) {
         return "loading..."
     }

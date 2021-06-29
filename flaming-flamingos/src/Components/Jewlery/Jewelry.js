@@ -1,9 +1,7 @@
 import {useContext} from 'react';
 import {DataContext} from '../../App';
-function Jewelry({items, onAdd}) {
-const cartData = useContext(DataContext);
-console.log(cartData)
-
+function Jewelry({items}) {
+    const cartData = useContext(DataContext);
     if(items.length <= 0){
         return "loading...."
     } 
