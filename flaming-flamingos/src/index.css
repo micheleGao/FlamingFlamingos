@@ -5,24 +5,35 @@
 *:after {
 	box-sizing:inherit;
 }
-body {
+/* body {
   margin: 0;
   text-align: center!important;
   color:hsl(hue, saturation, lightness);
   font-family: 'Playball', cursive, sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
+} */
+body{
+  font-family: 'Playball', cursive, sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
-
+h1{
+  text-align: center;
+}
 ul{
   list-style: none;
 }
 li{
-  display:inline-block!important;
-  padding: 0rem 8rem 0rem 0rem !important;
-  font-size: 25px!important;
-  text-decoration: none!important;
+  display:inline-block;
+  padding-left: 1rem;
+  padding-right: 7rem;
+  font-size: 25px;
+  text-decoration: none;
   align-items: center; 
+}
+.app h1{
+  text-align: center;
 }
 .header nav a:hover{
   display:flex !important;
@@ -41,14 +52,6 @@ nav{
 a{
   text-decoration: none !important;
 }
-/* header nav a:hover {
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
-  padding: 1rem;
-  transition: all 300ms ease;
-} */
 
 .body-image{
   opacity: 0.7;
@@ -65,11 +68,11 @@ a{
 .clothing-list{
   display:flex;
   flex-direction:row;
-  /* justify-content: space-between; */
-  /* justify-content: space-evenly; */
   justify-items: center;
   flex-wrap: wrap;
-  /* padding: 1rem 1rem 1rem 1rem; */
+  padding-left: 60px;
+  padding: auto;
+  
 }
 
 .clothes{
@@ -83,20 +86,19 @@ a{
 .clothes img {
   display:flex;
   margin: auto;
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 100px;
+  max-width: 100px;
   flex-basis: 33%;
-  padding:none;
   flex-wrap:wrap;
   flex-direction: column;
   justify-content: space-evenly;
   /* justify-content: space-between; */
   align-items: justify;
-  /* gap:0; */
+  
 } 
-.jewelery-list,
+
 .electronic-list,
-.clothes p {
+.clothes{
   margin: 0;
   flex-wrap: wrap;
   flex-direction:column;
@@ -105,32 +107,11 @@ a{
   /* justify-content: space-evenly; */
 }
 
-/* .jewelery-list{
-  margin: 0;
-  flex-wrap: wrap;
-  flex-direction:column;
-  text-align: center;
-  flex-basis: 5%;
-  justify-content: space-between;
-} */
-.clothes,
-.electronics,
-.clothes{
-  /* padding: 0rem 1rem 1rem 1rem; */
-  flex-basis: 33%; 
-} 
- /* .add-button{
-  grid-column:2;
-  grid-row:3 span 2;
-  align-items: center;
-  justify-content: space-evenly;
-}  */
 
 .jewelery-list,
 .electronic-list,
 .rick-list{
   display:flex;
-  /* flex-direction:column; */
   margin: 0;
   flex-direction:row;
   text-align: center;
@@ -149,22 +130,46 @@ a{
   flex-wrap: wrap;
   justify-content: space-evenly;
 
-} 
-
+}
+.cart-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+ 
+}
 .payment-form{
+  text-align: center;
+  padding-bottom: 100px;
+}
+.cart-details{
+  text-align: center;
+}
+.info{
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* .payment-form{
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   font-size: 20px;
-}
+} */
+
 .cart-images{
-  padding: 0.5rem  0.5rem  0.5rem 0.5rem;
+  /* display:flex; */
   margin:0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  /* flex-direction:row;
+  flex-basis: 33%;
+  flex-wrap: wrap;
+  justify-content: space-between; */
+ 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   body {
     background-color:white;
   }
@@ -179,8 +184,9 @@ a{
   }
   li{
     display:inline-block;
-    padding: 10px 10px 10px 10px!important;
-    font-size: 15px;
+    padding-left: 1rem !important;
+    /* padding: 10px 0px 10px 0px!important; */
+    font-size:10px;
     text-decoration: none; 
   }
   .rick img,
@@ -194,7 +200,7 @@ a{
     flex-basis: 33%;
   }
 }
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .clothes,
   .electronics,
   .clothes{
@@ -202,7 +208,7 @@ a{
     width:45%
   } 
   
-}
+} */
 
 
 

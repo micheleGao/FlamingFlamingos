@@ -28,14 +28,13 @@ function Clothing({items}) {
 
   return (
     <div className="flexbox-container">
-    <h1>This is the clothing</h1>
           <div className="clothing-list">
                 {apparels && apparels.map((apparel, id)=>{
                     return(
-                      <Card style={{ width: '12rem' }} key ={id} >
-                      <Card.Img variant="top" src={apparel.image} />
+                      <Card style={{ width: '13rem' }} key ={id} >
+                      <Card.Img variant="bottom" src={apparel.image} width="30"/>
                       <Card.Body>
-                          <Card.Title>{apparel.title}</Card.Title>
+                          <Card.Text >{apparel.title}</Card.Text>
                           <Card.Text> {apparel.price}
                           </Card.Text>
                           <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(apparel)}>Add to cart</Button>

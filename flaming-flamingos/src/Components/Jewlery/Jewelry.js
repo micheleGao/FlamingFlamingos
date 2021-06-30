@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { DataContext } from '../../App';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Col } from 'react-bootstrap';
 function Jewelry({ items }) {
     const cartData = useContext(DataContext);
     if (items.length <= 0) {
@@ -19,9 +20,9 @@ function Jewelry({ items }) {
             <div>
                 {jewels && jewels.map((jewel, id) => {
                     return (
-                        <Card style={{ width: '10rem' }} key ={id}>
-                        <Card.Img variant="top" src={jewel.image} />
+                        <Card style={{ width: '13rem' }} border= "success" key ={id}>
                         <Card.Body>
+                            <Card.Img variant="success" src={jewel.image} width="40"/>
                             <Card.Title>{jewel.title}</Card.Title>
                             <Card.Text> {jewel.price}</Card.Text>
                             <Button variant="primary" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(jewel)}>Add to cart</Button>

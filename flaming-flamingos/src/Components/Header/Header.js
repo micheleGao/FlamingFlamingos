@@ -6,7 +6,7 @@ function Header() {
     <div className="header">
       <nav className="nav">
         <ul>
-        <img className="flamingo-logo"src="https://i.ibb.co/s1bWhfx/flaming-FLAMINGOS-Logo.jpg" alt="flaming-FLAMINGOS-Logo"  width="80"/>
+        {/* <img className="flamingo-logo"src="https://i.ibb.co/s1bWhfx/flaming-FLAMINGOS-Logo.jpg" alt="flaming-FLAMINGOS-Logo"  width="80"/> */}
           <li><Link to="/">Home</Link></li>
           <li><Link to="/clothing">Clothing</Link></li>
           <li><Link to="/electronics">Electronics</Link></li>
