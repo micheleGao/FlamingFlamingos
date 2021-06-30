@@ -14,12 +14,11 @@ function ProductsList({items}) {
                 {items && items.map((item, id)=>{
                     return(
                       <Card style={{ width: '17rem' }} key ={id} >
-                      <Card.Img variant="top" src={item.image} />
                       <Card.Body>
+                      <Card.Img variant="top" src={item.image} />
                           <Card.Title>{item.title}</Card.Title>
-                          <Card.Text> {item.price}
-                          </Card.Text>
-                          <Button variant="primary" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(item)}>Add to cart</Button>
+                          <Card.Text> $ {item.price}</Card.Text>
+                          <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(item)}>Add to cart</Button>
                       </Card.Body>
                       </Card>
 

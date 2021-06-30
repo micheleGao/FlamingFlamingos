@@ -1,5 +1,8 @@
 import {useContext} from 'react';
 import { DataContext } from "../../App"
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
 export default function Electronics({ items}) {
     //storing a variable for the imported context data
     const cartData =useContext(DataContext)
@@ -21,15 +24,24 @@ export default function Electronics({ items}) {
             <div className="electronic-list">
                 {electronics && electronics.map((electronic, id) => {
                     return (
-                        <div className="electronics" key={id}>
-                            <img src={electronic.image} alt="" />
-                            {/* <p className="add-button"><button onClick={()=>cartData.addProductToCart(electronic)}className="add-clothing">ADD TO CART</button></p> */}
-                            <button type="button" className="btn btn-outline-dark" button onClick={()=>cartData.addProductToCart(electronic)}>Add to Cart</button>
-                            <p> $ {electronic.price}</p>
-                            <p>{electronic.title}</p>
-                            {/* <h4>{apparel.category}</h4> */}
 
-                        </div>
+                        <Card style={{ width: '15rem' }} key ={id}>
+                        <Card.Img variant="top" src={electronic.image} />
+                        <Card.Body>
+                            <Card.Title>{electronic.title}</Card.Title>
+                            <Card.Text> {electronic.price}</Card.Text>
+                            <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(electronic)}>Add to cart</Button>
+                        </Card.Body>
+                        </Card>
+
+                        // <div className="electronics" key={id}>
+                        //     <img src={electronic.image} alt="" />
+                        //     {/* <p className="add-button"><button onClick={()=>cartData.addProductToCart(electronic)}className="add-clothing">ADD TO CART</button></p> */}
+                        //     <button type="button" className="btn btn-outline-dark" button onClick={()=>cartData.addProductToCart(electronic)}>Add to Cart</button>
+                        //     <p> $ {electronic.price}</p>
+                        //     <p>{electronic.title}</p>
+
+                        // </div>
                     )
                 }
                 )}
