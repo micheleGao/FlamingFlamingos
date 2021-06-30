@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import Card from 'react-bootstrap/Card';
 
 function Random() {
   const [ricks, setRick] = useState([])
@@ -26,10 +27,18 @@ function Random() {
         <div className="rick-list">
                 {ricks && ricks.map((rick, id)=>{
                     return(
-                        <div className="rick" key={id}>
-                          <p>{rick.name}</p>
-                           <img src={rick.image} alt="Random Rick"/>
-                        </div>
+                      <Card style={{ width: '10rem' }} key ={id}>
+                        <Card.Img variant="top" src={rick.image} />
+                        <Card.Body>
+                            <Card.Title>{rick.name}</Card.Title>
+                            {/* <Card.Text> {jewel.price}</Card.Text> */}
+                            {/* <Button variant="primary" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(jewel)}>Add to cart</Button> */}
+                        </Card.Body>
+                        </Card>
+                        // <div className="rick" key={id}>
+                        //   <p>{rick.name}</p>
+                        //    <img src={rick.image} alt="Random Rick"/>
+                        // </div>
                     )}
                 )}  
            </div>   
