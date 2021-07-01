@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 
 const Cart = () => {
     const cartData = useContext(DataContext);
-    console.log({ cartData });
     function total() {
         let totalPrice = 0;
         for (let i = 0; i < cartData.cartItems.length; i++) {
@@ -29,16 +28,16 @@ const Cart = () => {
             </div>
             {cartData.cartItems.map((item, id) =>
                 <div className="cart" key={id}>
-                    <img className="cart-images" src={item.image} width="50" alt="" />
+                    <img className="cart-images" src={item.image} width="50" alt=""/>
                     <div className="cart-items">
                         {/* <div className="remove"><button onClick={() => cartData.removeProductToCart(id)}>Remove</button></div> */} 
-                         <Button variant="primary" size="sm" onClick={() => cartData.removeProductToCart(id)}>
+                         <Button variant="primary" onClick={()=>cartData.removeProductToCart(id)}>
                          Remove item
                          </Button> 
                         <div>$ {item.price}</div>
                     </div>
                     <div>
-                        {cartData.cartItems.length >= 0 && <div> </div>}
+                        {cartData.cartItems.length >=0 && <div> Your items </div>}
                     </div>
                 </div>)}
             <div className="cart-details">
@@ -53,7 +52,6 @@ const Cart = () => {
                 PAY  $ {grandTotal.toFixed(2)}
                 </Button>
                 </Link>
-                {/* <button className="pay">PAY  $ {grandTotal.toFixed(2)}</button> */}
             </div>
         </div>
     );

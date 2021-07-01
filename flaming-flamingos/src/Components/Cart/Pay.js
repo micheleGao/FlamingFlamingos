@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
 
 import { Button } from 'react-bootstrap';
 export default function Pay() {

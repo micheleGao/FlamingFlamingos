@@ -30,9 +30,9 @@ function Clothing({items}) {
                           <Card.Text >{apparel.title}</Card.Text>
                           <Card.Text> {apparel.price}</Card.Text>
                       </Card.Body>
-                      <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(apparel)}>Add to cart</Button>
+                      <Button variant="light" className="btn btn-outline-dark"  onClick={()=>cartData.addProductToCart(apparel)}> Add to cart</Button>
                       </Card>
-
+                      // onClick={()=>cartData.addProductToCart(apparel)}
                     )}
                 )}  
            </div>  

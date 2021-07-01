@@ -9,7 +9,7 @@ import ProductsList from './Components/ProductList/ProductList';
 import Random from './Components/Random/Random';
 import Cart from './Components/Cart/Cart';
 import Electronics from './Components/Electronics/Electronics';
- import Pay from './Components/Cart/Pay';
+import Pay from './Components/Cart/Pay';
 
 export const DataContext = createContext();
 console.log(DataContext);
@@ -26,7 +26,6 @@ function App() {
       const response = await fetch('https://fakestoreapi.com/products');
       const data = await response.json();
       setItems(data);
-      console.log(data);
     } catch (error) {
       console.log("There appears to be an error", error );
     }
@@ -39,6 +38,11 @@ function App() {
   useEffect(()=>{
     setRedirect(false);
   },[redirect])
+  
+  function onLinkClick(e) {
+    e.preventDefault();
+    // further processing happens here
+ }
 
 
   //useReducer to add functionality to the cart component.
@@ -76,18 +80,12 @@ function App() {
         <main>
           <Switch>
             <Route path="/" exact component={Home} />
-            {/* // <Route path="/shoes" render={()=><Shoes Shoes={Shoes}/> */}
             <Route path="/clothing" render={() => <Clothing items={items} />} />
             <Route path="/productslist"  render={() => <ProductsList items={items} />} />
             <Route path="/jewelry" render={() => <Jewelry items={items} />} />
             <Route path="/electronics" render={() => <Electronics items={items} />} />
             <Route path="/random" render={() => <Random ricks={ricks} setRick={setRick}/>} />
-            {/* <Route path="/productslist" component={ProductsList} items={items} /> */}
-            <Route path='/cart' render={() =>
-              <Cart
-                cartItems={cartItems}
-              />
-            } />
+            <Route path="/cart" onClick={onLinkClick} render={() => <Cart cartItems={cartItems} setItems={setItems}/>}/>
             <Route path="/pay" render={()=> <Pay redirect={redirect}/>}/>
           </Switch>
         </main>
