@@ -25,13 +25,13 @@ export default function Electronics({ items}) {
                 {electronics && electronics.map((electronic, id) => {
                     return (
 
-                        <Card style={{ width: '15rem' }} key ={id}>
+                        <Card style={{ width: '15rem' }} key ={id} border="light">
                         <Card.Img variant="top" src={electronic.image} />
                         <Card.Body>
                             <Card.Title>{electronic.title}</Card.Title>
                             <Card.Text> {electronic.price}</Card.Text>
-                            <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(electronic)}>Add to cart</Button>
                         </Card.Body>
+                        <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(electronic)}>Add to cart</Button>
                         </Card>
 
                         // <div className="electronics" key={id}>

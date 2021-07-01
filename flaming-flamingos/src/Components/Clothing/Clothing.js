@@ -31,14 +31,14 @@ function Clothing({items}) {
           <div className="clothing-list">
                 {apparels && apparels.map((apparel, id)=>{
                     return(
-                      <Card style={{ width: '13rem' }} key ={id} >
-                      <Card.Img variant="bottom" src={apparel.image} width="30"/>
+                      <Card style={{ width: '13rem' }} key ={id}  border="light">
+                      <Card.Img variant="top" src={apparel.image} width="30"/>
                       <Card.Body>
                           <Card.Text >{apparel.title}</Card.Text>
-                          <Card.Text> {apparel.price}
-                          </Card.Text>
-                          <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(apparel)}>Add to cart</Button>
+                          <Card.Text> {apparel.price}</Card.Text>
+                          {/* <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(apparel)}>Add to cart</Button> */}
                       </Card.Body>
+                      <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(apparel)}>Add to cart</Button>
                       </Card>
 
                         // <div className="clothes" key={id}>

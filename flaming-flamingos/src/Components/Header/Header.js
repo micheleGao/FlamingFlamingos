@@ -17,9 +17,7 @@ function Header() {
             <Link to="/cart">
               <button>
                 <img
-                  // width='15'
-                  // src='https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png'
-                  width='50'
+                  width='30'
                   src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWc56P5pW9BdCRU-_YRrYPn9IBiNye0fxuSA&usqp=CAU'
                   alt='Shopping cart icon' 
                 />

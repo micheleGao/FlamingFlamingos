@@ -20,7 +20,7 @@ function Jewelry({ items }) {
             <div>
                 {jewels && jewels.map((jewel, id) => {
                     return (
-                        <Card style={{ width: '13rem' }} border= "success" key ={id}>
+                        <Card style={{ width: '13rem' }} border= "light" key ={id}>
                         <Card.Body>
                             <Card.Img variant="success" src={jewel.image} width="40"/>
                             <Card.Title>{jewel.title}</Card.Title>
