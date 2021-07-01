@@ -28,7 +28,7 @@ function Clothing({items}) {
                       <Card.Img variant="top" src={apparel.image} width="30"/>
                       <Card.Body>
                           <Card.Text >{apparel.title}</Card.Text>
-                          <Card.Text> {apparel.price}</Card.Text>
+                          <Card.Text> $ {apparel.price}</Card.Text>
                       </Card.Body>
                       <Button variant="light" className="btn btn-outline-dark"  onClick={()=>cartData.addProductToCart(apparel)}> Add to cart</Button>
                       </Card>

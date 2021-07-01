@@ -24,9 +24,9 @@ function Jewelry({ items }) {
                         <Card.Body>
                             <Card.Img variant="success" src={jewel.image} width="40"/>
                             <Card.Title>{jewel.title}</Card.Title>
-                            <Card.Text> {jewel.price}</Card.Text>
-                            <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(jewel)}>Add to cart</Button>
+                            <Card.Text> $ {jewel.price}</Card.Text>
                         </Card.Body>
+                            <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(jewel)}>Add to cart</Button>
                         </Card>
                     )
                 })}

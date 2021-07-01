@@ -24,12 +24,11 @@ export default function Electronics({ items}) {
             <div className="electronic-list">
                 {electronics && electronics.map((electronic, id) => {
                     return (
-
                         <Card style={{ width: '15rem' }} key ={id} border="light">
                         <Card.Img variant="top" src={electronic.image} />
                         <Card.Body>
                             <Card.Title>{electronic.title}</Card.Title>
-                            <Card.Text> {electronic.price}</Card.Text>
+                            <Card.Text> $ {electronic.price}</Card.Text>
                         </Card.Body>
                         <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(electronic)}>Add to cart</Button>
                         </Card>

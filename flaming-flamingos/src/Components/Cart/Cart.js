@@ -30,14 +30,13 @@ const Cart = () => {
                 <div className="cart" key={id}>
                     <img className="cart-images" src={item.image} width="50" alt=""/>
                     <div className="cart-items">
-                        {/* <div className="remove"><button onClick={() => cartData.removeProductToCart(id)}>Remove</button></div> */} 
                          <Button variant="primary" onClick={()=>cartData.removeProductToCart(id)}>
                          Remove item
                          </Button> 
                         <div>$ {item.price}</div>
                     </div>
                     <div>
-                        {cartData.cartItems.length >=0 && <div> Your items </div>}
+                        {cartData.cartItems.length >=0}
                     </div>
                 </div>)}
             <div className="cart-details">
