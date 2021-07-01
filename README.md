@@ -1,13 +1,14 @@
 
-
-<img width="1653" alt="Screen Shot 2021-07-01 at 8 18 23 AM" src="https://user-images.githubusercontent.com/72947727/124124018-f0a6e480-da45-11eb-91c8-679f0498d528.png">
-
+<img width="1264" alt="Screen Shot 2021-07-01 at 6 49 46 PM" src="https://user-images.githubusercontent.com/72947727/124197702-23c89280-da9d-11eb-8bad-7743cba306c5.png">
+<img width="1270" alt="Screen Shot 2021-07-01 at 6 52 54 PM" src="https://user-images.githubusercontent.com/72947727/124198157-1a8bf580-da9e-11eb-911a-54d187e22d3b.png">
+<img width="1270" alt="Screen Shot 2021-07-01 at 6 52 54 PM" src="https://user-images.githubusercontent.com/72947727/124198164-1d86e600-da9e-11eb-8a73-6d9ab2c628a0.png">
+<img width="1405" alt="Screen Shot 2021-07-01 at 6 56 18 PM" src="https://user-images.githubusercontent.com/72947727/124198187-2972a800-da9e-11eb-8e6a-1e3ce865b0b1.png">
 
 # FlamingFlamingos
 
 An online shop to make you Flaming Hot!
 
-## Brief Description of Flaming Flamingos 
+## Description of Flaming Flamingos 
 Flaming Flamingos is a department store. The store sells electronics, clothing, and jewelry. Each category has a link provided for you to navigate easily through the site. There is also a fun link that navigates to a page with Rick and Morty episode photos.  
 
 ### Inspiration  for the project
@@ -45,6 +46,8 @@ I was inspired to create this shopping experience project because. I generally l
 1. Javascript
 2. React
 3. CSS
+4. React-router-dom
+5. React-Bootstrap
 
 ### Getting started.
 1.Fork 
@@ -53,15 +56,15 @@ I was inspired to create this shopping experience project because. I generally l
 4. Yarn add react-bootstrap. 
 5. Yarn add react-router-dom.
 6. Once you have the dependencies on the forked and clone version in your remote repository, run Yarn start. 
-7. If you notice, your package.json file should have all the dependencies and their versions listed under the dependencies.
-8. Another thing you can notice is that  your file should have a yarn.lock, and  the node modules. 
-You should be set to go after these.
+ -If you notice, your package.json file should have all the dependencies and their versions listed under the dependencies.
+ -Another thing you can notice is that  your file should have a yarn.lock, and  the node modules. 
+ -You should be set to go after these.
 
 ### Contribution Guidelines.
 1. You can add and increment (+)  and decrement (-) amount for the cart purchases on each item
 2. Add some music to the homepage or the Rick and Morty page.
 3. There can be other components to build out the store more, like shoes, and bags. 
-4. Validation for the cart component like the card used and their email info. 
+4. Validation for the cart component like the consumers card used and their email info. 
 5. Some styling, instead of using Bootstrap and creating  a card for each item in your own css styling and making it web-responsive.
 6. Refactor using redux. 
 
