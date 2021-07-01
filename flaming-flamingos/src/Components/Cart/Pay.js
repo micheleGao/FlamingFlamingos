@@ -63,7 +63,6 @@ export default function Pay() {
                     <input type="text"></input> 
                 </div> 
                 <div className="info">
-                {/* <button type="submit" >CONFIRM PAYMENT</button> */}
                 <Button type="submit" variant="secondary" size="lg" block>
                 Confirm Payment
                 </Button>

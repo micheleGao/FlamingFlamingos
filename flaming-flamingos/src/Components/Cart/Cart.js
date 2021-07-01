@@ -29,14 +29,12 @@ const Cart = () => {
             </div>
             {cartData.cartItems.map((item, id) =>
                 <div className="cart" key={id}>
-
                     <img className="cart-images" src={item.image} width="50" alt="" />
                     <div className="cart-items">
-                        {/* <div className="remove"><button onClick={() => cartData.removeProductToCart(id)}>Remove</button></div> */}
-                        {/* <div>{item.title}</div> */}
-                        <Button variant="primary" size="sm" onClick={() => cartData.removeProductToCart(id)}>
-                        Remove item
-                        </Button>
+                        {/* <div className="remove"><button onClick={() => cartData.removeProductToCart(id)}>Remove</button></div> */} 
+                         <Button variant="primary" size="sm" onClick={() => cartData.removeProductToCart(id)}>
+                         Remove item
+                         </Button> 
                         <div>$ {item.price}</div>
                     </div>
                     <div>

@@ -23,12 +23,13 @@ h1{
   background-color:white;
   border-style: double;
 }
+/* }
 ul{
   list-style: none;
   padding:0%;
   
-}
-li{
+} */
+/* li{
   display:inline-block;
   padding-left: 1rem;
   padding-right: 7rem;
@@ -36,7 +37,7 @@ li{
   text-decoration: none;
   align-items: center;
   color:black; 
-}
+} */
 
 .header nav a:hover{
   display:flex !important;
@@ -49,7 +50,7 @@ li{
 nav{
   position:sticky !important;
   top:0 !important;
-  background-color: white !important;
+  background-color:black !important;
   z-index: 1;
   border-style: double;
   text-align: justify;
@@ -59,12 +60,16 @@ a{
   text-decoration: none !important;
   color:black;
 }
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 0!important;
+}
 
 .body-image{
   opacity: 0.7;
 }
 .flamingo-logo{
-  margin: 20rem 20rem 20rem 20rem ;
+  margin: 5rem 10rem 5rem 10rem;
   border-radius: 50%;
 }
 
@@ -118,8 +123,17 @@ a{
   /* justify-content: space-evenly; */
 }
 
-
 .jewelery-list,
+.jewel{
+  display:flex;
+  margin: 0;
+  flex-direction:row;
+  text-align: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+
+}
+/* .jewelery-list, */
 .electronic-list,
 .rick-list{
   display:flex;
@@ -128,7 +142,6 @@ a{
   text-align: center;
   flex-basis: 10%;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   justify-content: space-evenly;
 }
 .cart{
@@ -169,10 +182,6 @@ a{
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   font-size: 20px;
 } */
-dl, ol, ul {
-  margin-top: 0;
-  margin-bottom: 0!important;
-}
 
 .cart-images{
   /* display:flex; */
@@ -200,7 +209,7 @@ dl, ol, ul {
   }
   li{
     display:inline-block;
-    padding-left: 1Zrem !important;
+    padding-left: 1rem !important;
     font-size:20px;
     text-decoration: none; 
   }

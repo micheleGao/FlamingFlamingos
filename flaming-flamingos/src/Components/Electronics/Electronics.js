@@ -7,7 +7,7 @@ export default function Electronics({ items}) {
     //storing a variable for the imported context data
     const cartData =useContext(DataContext)
     if (items.length <= 0) {
-        return "loading..."
+        return <img src="https://i.ibb.co/d7xMG21/Cute-Ice-Cream-Birthday-Card.gif" alt="flamingo on fire" width="90"/>
     }
     //if clothing is equal to category. create a div with the following images, price. and title
     const electronics = items.filter((item) => {
@@ -34,14 +34,6 @@ export default function Electronics({ items}) {
                         <Button variant="light" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(electronic)}>Add to cart</Button>
                         </Card>
 
-                        // <div className="electronics" key={id}>
-                        //     <img src={electronic.image} alt="" />
-                        //     {/* <p className="add-button"><button onClick={()=>cartData.addProductToCart(electronic)}className="add-clothing">ADD TO CART</button></p> */}
-                        //     <button type="button" className="btn btn-outline-dark" button onClick={()=>cartData.addProductToCart(electronic)}>Add to Cart</button>
-                        //     <p> $ {electronic.price}</p>
-                        //     <p>{electronic.title}</p>
-
-                        // </div>
                     )
                 }
                 )}
