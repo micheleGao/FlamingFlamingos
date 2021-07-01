@@ -31,7 +31,7 @@ I was inspired to create this shopping experience project because. I generally l
 ###### Wireframing
 [Scan.pdf](https://github.com/micheleGao/FlamingFlamingos/files/6749020/Scan.pdf)
 
-#### Complications during the project
+### Complications during the project
 
 - The API for the clothing was really categorized except for two things which were the electronics and jewelry
 - Some components were not rendering properly, had to use a conditional statement.
@@ -41,12 +41,12 @@ I was inspired to create this shopping experience project because. I generally l
 - Creating the remove button for the cart component. 
 
 
-### Technologies Used.
+## Technologies Used.
 1. Javascript
 2. React
 3. CSS
 
-####-Getting started.
+### Getting started.
 1.Fork 
 2. Clone down the repo.
 3. Once it’s in your remote repository, cd into the file (make sure you're in the react file). Install dependencies.
@@ -57,7 +57,7 @@ I was inspired to create this shopping experience project because. I generally l
 8. Another thing you can notice is that  your file should have a yarn.lock, and  the node modules. 
 You should be set to go after these.
 
-### - Contribution Guidelines.
+### Contribution Guidelines.
 1. You can add and increment (+)  and decrement (-) amount for the cart purchases on each item
 2. Add some music to the homepage or the Rick and Morty page.
 3. There can be other components to build out the store more, like shoes, and bags. 
