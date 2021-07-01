@@ -1,7 +1,6 @@
 
 <img width="1264" alt="Screen Shot 2021-07-01 at 6 49 46 PM" src="https://user-images.githubusercontent.com/72947727/124197702-23c89280-da9d-11eb-8bad-7743cba306c5.png">
 <img width="1270" alt="Screen Shot 2021-07-01 at 6 52 54 PM" src="https://user-images.githubusercontent.com/72947727/124198157-1a8bf580-da9e-11eb-911a-54d187e22d3b.png">
-<img width="1270" alt="Screen Shot 2021-07-01 at 6 52 54 PM" src="https://user-images.githubusercontent.com/72947727/124198164-1d86e600-da9e-11eb-8a73-6d9ab2c628a0.png">
 <img width="1405" alt="Screen Shot 2021-07-01 at 6 56 18 PM" src="https://user-images.githubusercontent.com/72947727/124198187-2972a800-da9e-11eb-8e6a-1e3ce865b0b1.png">
 
 # FlamingFlamingos
