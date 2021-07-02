@@ -98,8 +98,7 @@ dl, ol, ul {
   flex-basis: 33%;
 }
 
-.jewelery-list,
-.jewel{
+.jewelery-list{
   display:flex;
   margin: 0;
   flex-direction:row;
@@ -117,7 +116,7 @@ dl, ol, ul {
   text-align: center;
   flex-basis: 10%;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content:flex-start;
 }
 .cart{
   display:flex;
