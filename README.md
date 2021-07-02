@@ -10,6 +10,9 @@ An online shop to make you Flaming Hot!
 ## Description of Flaming Flamingos 
 Flaming Flamingos is a department store. The store sells electronics, clothing, and jewelry. Each category has a link provided for you to navigate easily through the site. There is also a fun link that navigates to a page with Rick and Morty episode photos.  
 
+ #### This project was deployed to netlify, heres the link: https://gifted-perlman-16f6e4.netlify.app/
+
+
 ### Inspiration  for the project
 
 I was inspired to create this shopping experience project because. I generally love to go shopping online, and I wanted to build one myself. I often went to sites and everything tended to be hard to navigate. There were times where I found myself frustrated about the user experience. So I decided as a project to recreate a shopping experience that I thought would be easy to navigate and user friendly. My main goal was to have a clean and simple page. I never done a project with react before so this was something I was excited about and ultimately inspired me to use react in this project. 
@@ -48,7 +51,7 @@ I was inspired to create this shopping experience project because. I generally l
 4. React-router-dom
 5. React-Bootstrap
 
-### Getting started.
+## Getting started.
 1.Fork 
 2. Clone down the repo.
 3. Once it’s in your remote repository, cd into the file (make sure you're in the react file). Install dependencies.
