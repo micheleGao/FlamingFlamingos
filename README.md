@@ -17,6 +17,10 @@ Flaming Flamingos is a department store. The store sells electronics, clothing, 
 
 I was inspired to create this shopping experience project because. I generally love to go shopping online, and I wanted to build one myself. I often went to sites and everything tended to be hard to navigate. There were times where I found myself frustrated about the user experience. So I decided as a project to recreate a shopping experience that I thought would be easy to navigate and user friendly. My main goal was to have a clean and simple page. I never done a project with react before so this was something I was excited about and ultimately inspired me to use react in this project. 
 
+## Wireframing of the components 
+<img width="706" alt="Screen Shot 2021-07-02 at 10 21 38 AM" src="https://user-images.githubusercontent.com/72947727/124299911-f7a82280-db2b-11eb-8a8b-0f5279c3d796.png">
+
+
 ## My MVP Goals
 
  - Have a nav with all the components linked to it.
