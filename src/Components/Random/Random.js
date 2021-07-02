@@ -30,15 +30,10 @@ function Random() {
                       <Card style={{ width: '10rem' }} key ={id}>
                         <Card.Img variant="top" src={rick.image} />
                         <Card.Body>
-                            <Card.Title>{rick.name}</Card.Title>
-                            {/* <Card.Text> {jewel.price}</Card.Text> */}
-                            {/* <Button variant="primary" className="btn btn-outline-dark" onClick={()=>cartData.addProductToCart(jewel)}>Add to cart</Button> */}
+                            <Card.Title>{rick.name}</Card.Title>   
                         </Card.Body>
                         </Card>
-                        // <div className="rick" key={id}>
-                        //   <p>{rick.name}</p>
-                        //    <img src={rick.image} alt="Random Rick"/>
-                        // </div>
+                        
                     )}
                 )}  
            </div>   
